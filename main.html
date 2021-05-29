@@ -9,17 +9,21 @@
     <title>Assessment Home Page</title>
 </head>
 <body>
-    <ul>
-        <li data-tab-target="#tableOne">Table 1</li>
-        <li data-tab-target="#tableTwo">Table 2</li>
+    <ul class="tabs">
+        <li data-tab-target="#tableOne" class = "active tab">Table 1</li>
+        <li data-tab-target="#tableTwo" class = "tab">Table 2</li>
     </ul>
-    <div class = "content" data-tab-content>
-        <div id="tableOne">
+
+
+    <div class = "content" >
+        <div id="tableOne" data-tab-content class="active">
             <h1>Table 1</h1>
+            <p>workers</p>
 
         </div>
         <div id="tableTwo" data-tab-content>
             <h1>Table 2</h1>
+            <p>complaints</p>
         </div>
     </div>
 </body>
