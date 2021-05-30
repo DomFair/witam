@@ -8,6 +8,8 @@
 body { 
     padding: 0;
     margin: 0;
+    /* background-color: #3e4444; */
+    color: #ccc;
 
 }
 
@@ -15,22 +17,50 @@ body {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 2px solid black;
+    margin: 0px;
+    padding: 20px;
+    /* border-bottom: 2px solid black; */
+    background-color: black;
 
 }
 
+/* .content{
+    
+    text-align: center;
+} */
 .tab{
+    font-size: 18px;
     cursor: pointer;
-    padding: 10px
+    padding: 10px;
+    border: 2px;
+    outline-color:white;
+    outline-style:solid;
 }
 
 .tab.active{
 
-    background-color: #ccc;
+    background-color: #77a8a8;
+    color: #3e4444;
 }
 .tab:hover{
 
-    background-color: #AAA;
+    background-color: #c0ded9;
+    color: #3e4444;
+}
+#container{
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+}
+.left {
+
+    width: 50vw;
+    background-color:#3e4444;
+
+}
+.right {
+
+    width: 50vw;
+    background-color:#3e4444;
+
 }
