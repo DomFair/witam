@@ -5,6 +5,13 @@
     display: block;
 }
 
+[data-tab-complaint] {
+    display:none;
+}
+.active[data-tab-complaint]{
+    display: block;
+}
+
 body { 
     padding: 0;
     margin: 0;
@@ -64,3 +71,24 @@ body {
     background-color:#3e4444;
 
 }
+
+#addWorkerButton{
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #009879;
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  
+  box-shadow: #29516e;
+  
+}
+
+
+
+
