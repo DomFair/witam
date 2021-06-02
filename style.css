@@ -5,17 +5,10 @@
     display: block;
 }
 
-[data-tab-complaint] {
-    display:none;
-}
-.active[data-tab-complaint]{
-    display: block;
-}
 
 body { 
     padding: 0;
     margin: 0;
-    /* background-color: #3e4444; */
     color: #ccc;
 
 }
@@ -26,15 +19,10 @@ body {
     list-style-type: none;
     margin: 0px;
     padding: 20px;
-    /* border-bottom: 2px solid black; */
+    
     background-color: black;
 
 }
-
-/* .content{
-    
-    text-align: center;
-} */
 .tab{
     font-size: 18px;
     cursor: pointer;
@@ -54,6 +42,9 @@ body {
     background-color: #c0ded9;
     color: #3e4444;
 }
+
+
+
 #container{
     min-height: 100vh;
     display: flex;
@@ -72,13 +63,30 @@ body {
 
 }
 
+.containerBot{
+    min-height: 600px;
+    display: flex;
+    text-align: center;
+}
+
+
+.botLeft{
+    width: 33vw;
+}
+.botMid{
+    width: 33vw;
+}
+.botRight{
+    width: 33vw;
+}
+
 #addWorkerButton{
 
   cursor: pointer;
   outline: none;
   border: none;
   background-color: #009879;
-  width: 200px;
+  width: 220px;
   height: 50px;
   border-radius: 30px;
   font-size: 1.5rem;
@@ -88,6 +96,89 @@ body {
   box-shadow: #29516e;
   
 }
+
+#DeleteWorkerButton{
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #980000;
+    width: 220px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    
+    box-shadow: #6e2929;
+    
+  }
+  #EditWorkerButton{
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #210098;
+    width: 220px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    
+    box-shadow: #210098;
+    
+  }
+
+  #addCompButton{
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #009879;
+    width: 220px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    
+    box-shadow: #29516e;
+    
+  }
+  
+  #DeleteCompButton{
+  
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background-color: #980000;
+      width: 220px;
+      height: 50px;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      
+      box-shadow: #6e2929;
+      
+    }
+    #EditCompButton{
+  
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background-color: #210098;
+      width: 220px;
+      height: 50px;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      
+      box-shadow: #210098;
+      
+    }
 
 
 

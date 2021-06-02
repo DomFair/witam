@@ -1,7 +1,14 @@
 const tabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
 let addWorkerButton = document.querySelector('#addWorkerButton');
 let addWorkerDiv = document.querySelector('#addWorkerDiv');
+
+let EditWorkerButton = document.querySelector('#EditWorkerButton');
+let EditWorkerDiv = document.querySelector('#EditWorkerDiv');
+
+let DelWorkerButton = document.querySelector('#DeleteWorkerButton');
+let DelWorkerDiv = document.querySelector('#DeletetWorkerDiv');
 //const inputs = document.documentElement.inputz;
 
 tabs.forEach(tab => {
@@ -16,12 +23,29 @@ tabs.forEach(tab => {
 
 })
 
+
 addWorkerButton.addEventListener('click', () =>{
 
     if(addWorkerDiv.style.display === 'none'){
         addWorkerDiv.style.display = 'block';
     }else{
         addWorkerDiv.style.display = 'none';
+    }
+})
+EditWorkerButton.addEventListener('click', () =>{
+
+    if(EditWorkerDiv.style.display === 'none'){
+        EditWorkerDiv.style.display = 'block';
+    }else{
+        EditWorkerDiv.style.display = 'none';
+    }
+})
+DelWorkerButton.addEventListener('click', () =>{
+
+    if(DelWorkerDiv.style.display === 'none'){
+        DelWorkerDiv.style.display = 'block';
+    }else{
+        DelWorkerDiv.style.display = 'none';
     }
 })
 
