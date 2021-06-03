@@ -9,7 +9,15 @@ let EditWorkerDiv = document.querySelector('#EditWorkerDiv');
 
 let DelWorkerButton = document.querySelector('#DeleteWorkerButton');
 let DelWorkerDiv = document.querySelector('#DeletetWorkerDiv');
-//const inputs = document.documentElement.inputz;
+
+let addCompButton = document.querySelector('#addCompButton');
+let addCompDiv = document.querySelector('#AddCompDiv');
+
+let EditCompButton = document.querySelector('#EditCompButton');
+let EditCompDiv = document.querySelector('#EditCompDiv');
+
+let DelCompButton = document.querySelector('#DeleteCompButton');
+let DelCompDiv = document.querySelector('#DeleteCompDiv');
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -46,6 +54,33 @@ DelWorkerButton.addEventListener('click', () =>{
         DelWorkerDiv.style.display = 'block';
     }else{
         DelWorkerDiv.style.display = 'none';
+    }
+})
+
+addCompButton.addEventListener('click', () =>{
+
+    if(addCompDiv.style.display === 'none'){
+        addCompDiv.style.display = 'block';
+    }else{
+        addCompDiv.style.display = 'none';
+    }
+})
+
+EditCompButton.addEventListener('click', () =>{
+
+    if(EditCompDiv.style.display === 'none'){
+        EditCompDiv.style.display = 'block';
+    }else{
+        EditCompDiv.style.display = 'none';
+    }
+})
+
+DelCompButton.addEventListener('click', () =>{
+
+    if(DelCompDiv.style.display === 'none'){
+        DelCompDiv.style.display = 'block';
+    }else{
+        DelCompDiv.style.display = 'none';
     }
 })
 

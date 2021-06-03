@@ -41,6 +41,15 @@
     if(!isset($DelSeachLastName)){
         $DelSeachLastName = '';
     }
+    if(!isset($CompFName)){
+        $CompFName = '';
+    }
+    if(!isset($CompLName)){
+        $CompLName = '';
+    }
+    if(!isset($Complaint)){
+        $Complaint = '';
+    }
 
         
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -650,7 +659,7 @@
                                         <p><?php echo $Editsuccess ?><p>
                                 <?php } ?>
                                 <div id="EditWorkerDiv" style='padding: 10px;display:none;'>
-                                    <form id="form-edit-Worker"name='editWorker' action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+                                    <form id="form-edit-Worker"name='editWorker' action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
                                         <h3>Please enter the first and last name of the person you want to edit</h3>
                                         <br>
                                         <input maxlength="20" name="SearchWorkerFName" placeholder = "First Name" value="<?php echo htmlspecialchars($EditSeachFirstName) ?>" onkeyup="lettersOnly(this)">
@@ -704,7 +713,7 @@
                                         <p><?php echo $success ?><p>
                                     <?php } ?>
                                 <div id="addWorkerDiv" style='padding: 10px;display:none;'>
-                                    <form id="form-add-Worker"name='addWorker' action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+                                    <form id="form-add-Worker"name='addWorker' action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
                                         <br>
                                         <input maxlength="20" name="workerName" placeholder = "First Name" value="<?php echo htmlspecialchars($Wname) ?>" onkeyup="lettersOnly(this)">
                                         <br>
@@ -741,7 +750,7 @@
                                         <p><?php echo $Delsuccess ?><p>
                                     <?php } ?>
                                 <div id="DeletetWorkerDiv" style='padding: 10px;display:none;'>
-                                <form id="form-Delete-Worker"name='deleteWorker' action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+                                <form id="form-Delete-Worker"name='deleteWorker' action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
                                         <h3>Please enter the first and last name of the person you want to edit</h3>
                                         <br>
                                         <input maxlength="20" name="DeleteWorkerFName" placeholder = "First Name" value="<?php echo htmlspecialchars($DelSeachFirstName) ?>" onkeyup="lettersOnly(this)">
@@ -769,19 +778,41 @@
                                 <div class = "botLeft">
                                     <button id='EditCompButton'>Edit Complaint</button>
                                     <div id="EditCompDiv" style='padding: 10px;display:none;'>
-
+                                        <p>edit</p>
                                     </div>
                                 </div>
                                 <div class = "botMid">
                                     <button id='addCompButton'>Add Complaint</button>
                                     <div id="AddCompDiv" style='padding: 10px;display:none;'>
-                                    
+                                    <br>
+                                        <input maxlength="20" name="CompFName" placeholder = "First Name" value="<?php echo htmlspecialchars($CompFName) ?>" onkeyup="lettersOnly(this)">
+                                        <br>
+                                        <?php if(isset($Wname_error)){ ?>
+                                            <p><?php echo $Wname_error ?><p>
+                                        <?php } ?>
+                                        <br>
+                                        <input maxlength="20" name="CompLName" placeholder = "Last Name" value="<?php echo htmlspecialchars($CompLName) ?>" onkeyup="lettersOnly(this)">
+                                        <br>
+                                        <?php if(isset($Wlastname_error)){ ?>
+                                            <p><?php echo $Wlastname_error ?><p>
+                                        <?php } ?>
+                                        <br>
+                                        <input type="date" name="date">
+                                        <br>
+                                        <br>
+                                        <input maxlength="500" name="complaint" placeholder = "Enter Complaint" value="<?php echo htmlspecialchars($Complaint) ?>">
+                                        <br>
+                                        <?php if(isset($Wsex_error)){ ?>
+                                            <p><?php echo $Wsex_error ?><p>
+                                        <?php } ?>
+                                        <br>
+                                        <input type='submit' name='Delete-Form' value='submit'>
                                     </div>
                                 </div>
                                 <div class='botRight'>
                                     <button id='DeleteCompButton'>Delete Complaint</button>
                                     <div id="DeleteCompDiv" style='padding: 10px;display:none;'>
-                                    
+                                        <p>del</p>
                                     </div>
                                 </div>
                             </div>
