@@ -31,7 +31,6 @@ tabs.forEach(tab => {
 
 })
 
-
 addWorkerButton.addEventListener('click', () =>{
 
     if(addWorkerDiv.style.display === 'none'){
